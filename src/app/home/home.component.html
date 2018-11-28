@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+          <ul class="list-group">
+              <li class="list-group-item menu-list active"   id="m00" (click)="scrollToDiv('00')"><a href="#">All</a></li>
+            <li *ngFor="let cat of getCategories();index as i" id="m{{i}}"  class="list-group-item menu-list" (click)="scrollToDiv(i)"><a href="#">{{cat}}</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 wrapper">
+            <div class="panel-group" *ngFor="let cat of getCategories();index as i">
+              <div class="panel panel-default" id="{{i}}">
+                <div class="panel-heading">{{cat}}</div>
+                <div class="panel-body panels" *ngFor="let item of getDetails(cat)">
+                  <div class="col-md-8">
+                      <span [class]="item.vegflag=='nonveg'?'non-veg-dot':'veg-dot'"></span>
+                        <span>
+                          {{item.name}}
+                        <p *ngIf="item.description" class="desc">{{item.description}}</p>
+                        </span>
+                  </div>
+                      <span class="pull-right col-md-4">
+                          <a class="custom-btn">
+                          <span class="glyphicon glyphicon-minus"></span>
+                          </a>
+                        <span class="item-count">0</span>
+                        <a class="custom-btn">
+                          <span class="glyphicon glyphicon-plus"></span>
+                        </a>
+                        <span class="price"><i class="fa fa-rupee"></i>{{item.price}}</span>
+                      </span>
+                    </div>
+                   
+                </div>
+              </div>
+            </div>
+        <div class="col-md-3">
+          <div class="panel-group">
+            <div class="panel panel-default">
+              <div class="panel-heading">Your Cart</div>
+              <div class="panel-body">
+                  <div class="order-list col-md-12">
+                      <span class="col-md-5">ndsjnfdsnk</span>
+                      <span class="col-sm-1">X</span>
+                      <span class="col-sm-1">2</span>
+                      <span><i class="fa fa-rupee"></i>234</span>
+                    </div>
+                <div class="order-list col-md-12">
+                    <span class="col-md-5">ndsjnfdsnk</span>
+                    <span class="col-md-1">X</span>
+                    <span class="col-md-1">2</span>
+                    <span class="t"><i class="fa fa-rupee"></i>12</span>
+                  </div>
+                
+              </div>
+              <div class="panel-footer">
+                Total : 2123
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+
+  </div>

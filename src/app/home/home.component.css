@@ -1,0 +1,62 @@
+.active{
+    background-color: yellow;
+    color: black;
+}
+.list-group-item>a{
+    text-decoration: none;
+}
+.menu-list{
+    cursor: pointer;
+}
+.panel-heading{
+    background-color: yellow;
+    text-align: center;
+    font-weight: bold;
+}
+.non-veg-dot {
+    height: 15px;
+    width: 15px;
+    background-color: red;
+    
+    display: inline-block;
+  }
+.veg-dot {
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    
+    display: inline-block;
+  }
+.item-count{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.desc{
+    margin-left: 15px;
+    padding: 2px;
+    font-size: 12px;
+    text-align: justify;
+}
+.custom-btn{
+    border: 1px solid black;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+.panels{
+    border: 1px solid grey;
+}
+.wrapper{
+    overflow-y: scroll;
+    max-height: 680px;
+}
+.price{
+    margin-left: 10px;
+}
+.order-list{
+    padding: 5px 2px;
+    margin: 2px 0px;
+}
+.t{
+    text-align: right;
+}
